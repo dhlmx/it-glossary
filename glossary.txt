@@ -1,0 +1,23 @@
+CRM: Customer Relationship Management
+
+DAX: Data Analysis Expressions
+
+ETL: Extract, transform, and Load
+ERP: Enterprise Resource Planning
+
+HRM: Human Resource Management
+
+IaaS: Infrastructure-as-a-Service
+
+OData: Open Data Protocol
+ODBC: Open Database Connectivity
+OLE DB: Object Linking and Embedding Database
+OLTP: Online Transaction Processing
+
+PaaS: Platform as a Service
+
+RLS: Row-Level Security
+
+SaaS: Software as a Service
+
+SSIS: SQL Server Integration Services

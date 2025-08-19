@@ -1,11 +1,19 @@
 CRM: Customer Relationship Management
 
 DAX: Data Analysis Expressions
+DBA: Database Administrator
+DDL: Data Definition Language
+DML: Data Modification Language
+DVMs: Data Management Views
 
 ETL: Extract, transform, and Load
 ERP: Enterprise Resource Planning
 
+GPS: Global Positioning System
+
+HCI: Human-computer Interface
 HRM: Human Resource Management
+HTAP: Hybrid Transactional and Analytical Processing
 
 IaaS: Infrastructure-as-a-Service
 
@@ -19,5 +27,6 @@ PaaS: Platform as a Service
 RLS: Row-Level Security
 
 SaaS: Software as a Service
-
+SKU: 
+SRID: spatial reference identifier
 SSIS: SQL Server Integration Services

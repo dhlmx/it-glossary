@@ -17,6 +17,8 @@ HTAP: Hybrid Transactional and Analytical Processing
 
 IaaS: Infrastructure-as-a-Service
 
+LQS: Live Query Statistics
+
 OData: Open Data Protocol
 ODBC: Open Database Connectivity
 OLE DB: Object Linking and Embedding Database

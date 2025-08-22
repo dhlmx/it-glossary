@@ -1,118 +1,118 @@
 Environment
 
-    VisualStudio
-        1.- Download Microsoft Visual Studio 2022 version 17.0 or later for Windows from the following link:
-            https://visualstudio.microsoft.com/downloads/.
+  VisualStudio
+    1.- Download Microsoft Visual Studio 2022 version 17.0 or later for Windows from the following link:
+      https://visualstudio.microsoft.com/downloads/.
 
-        2.- Start the installer.
+    2.- Start the installer.
 
-        3.- On the Workloads tab, select the following:
-            ASP.NET and web development
-            Azure development
-            .NET desktop development
-            Desktop development with C++
-            Universal Windows Platform development
-            Mobile development with .NET
+    3.- On the Workloads tab, select the following:
+      ASP.NET and web development
+      Azure development
+      .NET desktop development
+      Desktop development with C++
+      Universal Windows Platform development
+      Mobile development with .NET
 
-        4.- On the Individual components tab, in the Code tools section, select the following:
-            Class Designer
-            Git for Windows
-            PreEmptive Protection - Dotfuscator
+    4.- On the Individual components tab, in the Code tools section, select the following:
+      Class Designer
+      Git for Windows
+      PreEmptive Protection - Dotfuscator
 
-        5.- Click Install and wait for the installer to acquire the selected software and install it.
-        6.- When the installation is complete, click Launch.
-        7.- The first time that you run Visual Studio, you will be prompted to sign in. If you have a Microsoft account, you can use that account. If you don't, then register for a new one at the following link: https://signup.live.com/.
-        8.- The first time that you run Visual Studio, you will be prompted to configure your environment. For Development Settings, choose Visual C#. For the color theme, I chose Blue, but you can choose whatever tickles your fancy.
-        9.- If you want to customize your keyboard shortcuts, navigate to Tools | Options…, and then select the Keyboard section.
+    5.- Click Install and wait for the installer to acquire the selected software and install it.
+    6.- When the installation is complete, click Launch.
+    7.- The first time that you run Visual Studio, you will be prompted to sign in. If you have a Microsoft account, you can use that account. If you don't, then register for a new one at the following link: https://signup.live.com/.
+    8.- The first time that you run Visual Studio, you will be prompted to configure your environment. For Development Settings, choose Visual C#. For the color theme, I chose Blue, but you can choose whatever tickles your fancy.
+    9.- If you want to customize your keyboard shortcuts, navigate to Tools | Options…, and then select the Keyboard section.
 
-    VSCode
-        1.- Download and install either the Stable build or the Insiders edition of Visual Studio Code from the following link:
-            https://code.visualstudio.com/.
+  VSCode
+    1.- Download and install either the Stable build or the Insiders edition of Visual Studio Code from the following link:
+      https://code.visualstudio.com/.
 
-            More Information: If you need more help installing Visual Studio Code, you can read the official setup guide at the following link:
-            https://code.visualstudio.com/docs/setup/setup-overview.
+      More Information: If you need more help installing Visual Studio Code, you can read the official setup guide at the following link:
+      https://code.visualstudio.com/docs/setup/setup-overview.
 
-        2.- Download and install the .NET SDKs for versions 3.1, 5.0, and 6.0 from the following link:
-            https://www.microsoft.com/net/download.
+    2.- Download and install the .NET SDKs for versions 3.1, 5.0, and 6.0 from the following link:
+      https://www.microsoft.com/net/download.
 
-            To fully learn how to control .NET SDKs, we need multiple versions installed. .NET Core 3.1, .NET 5.0, and .NET 6.0 are the three currently supported versions. You can safely install multiple ones side by side. You will learn how to target the one you want throughout this book.
+      To fully learn how to control .NET SDKs, we need multiple versions installed. .NET Core 3.1, .NET 5.0, and .NET 6.0 are the three currently supported versions. You can safely install multiple ones side by side. You will learn how to target the one you want throughout this book.
 
-        3.- To install the C# extension, you must first launch the Visual Studio Code application.
-        4.- In Visual Studio Code, click the Extensions icon or navigate to View | Extensions.
-        5.- C# is one of the most popular extensions available, so you should see it at the top of the list, or you can enter C# in the search box.
-        6.- Click Install and wait for supporting packages to download and install.
-        7.- Enter .NET Interactive in the search box to find the .NET Interactive Notebooks extension.
-        8.- Click Install and wait for it to install.
+    3.- To install the C# extension, you must first launch the Visual Studio Code application.
+    4.- In Visual Studio Code, click the Extensions icon or navigate to View | Extensions.
+    5.- C# is one of the most popular extensions available, so you should see it at the top of the list, or you can enter C# in the search box.
+    6.- Click Install and wait for supporting packages to download and install.
+    7.- Enter .NET Interactive in the search box to find the .NET Interactive Notebooks extension.
+    8.- Click Install and wait for it to install.
 
-    Removing old versions of .NET
-        dotnet --list-sdks
-        dotnet --list-runtimes
+  Removing old versions of .NET
+    dotnet --list-sdks
+    dotnet --list-runtimes
 
-        dotnet-core-uninstall remove --all-previews-but-latest --sdk 
+    dotnet-core-uninstall remove --all-previews-but-latest --sdk 
 
-    Extensions
-        C# for Visual Studio Code (powered by OmniSharp)
-        ms-dotnettools.csharp
-            C# editing support, including syntax highlighting, IntelliSense, Go to Definition, Find All References, debugging support for .NET, and support for csproj projects on Windows, macOS, and Linux.
+  Extensions
+    C# for Visual Studio Code (powered by OmniSharp)
+    ms-dotnettools.csharp
+      C# editing support, including syntax highlighting, IntelliSense, Go to Definition, Find All References, debugging support for .NET, and support for csproj projects on Windows, macOS, and Linux.
 
-        .NET Interactive Notebooks
-        ms-dotnettools.dotnet-interactive-vscode
-            This extension adds support for using .NET Interactive in a Visual Studio Code notebook. It has a dependency on the Jupyter extension (ms-toolsai.jupyter).
+    .NET Interactive Notebooks
+      ms-dotnettools.dotnet-interactive-vscode
+        This extension adds support for using .NET Interactive in a Visual Studio Code notebook. It has a dependency on the Jupyter extension (ms-toolsai.jupyter).
 
-        MSBuild project tools
-        tinytoy.msbuild-project-tools
-            Provides IntelliSense for MSBuild project files, including autocomplete for <PackageReference> elements.
+    MSBuild project tools
+    tinytoy.msbuild-project-tools
+      Provides IntelliSense for MSBuild project files, including autocomplete for <PackageReference> elements.
 
-        REST Client
-        humao.rest-client
-            Send an HTTP request and view the response directly in Visual Studio Code.
+    REST Client
+    humao.rest-client
+      Send an HTTP request and view the response directly in Visual Studio Code.
 
-        ILSpy .NET Decompiler
-        icsharpcode.ilspy-vscode
-            Decompile MSIL assemblies – support for modern .NET, .NET Framework, .NET Core, and .NET Standard.
+    ILSpy .NET Decompiler
+    icsharpcode.ilspy-vscode
+      Decompile MSIL assemblies – support for modern .NET, .NET Framework, .NET Core, and .NET Standard.
 
-        Azure Functions for Visual Studio Code
-        ms-azuretools.vscode-azurefunctions
-            Create, debug, manage, and deploy serverless apps directly from VS Code. It has dependencies on Azure Account (ms-vscode.azure-account) and Azure Resources (ms-azuretools.vscode-azureresourcegroups) extensions.
+    Azure Functions for Visual Studio Code
+    ms-azuretools.vscode-azurefunctions
+      Create, debug, manage, and deploy serverless apps directly from VS Code. It has dependencies on Azure Account (ms-vscode.azure-account) and Azure Resources (ms-azuretools.vscode-azureresourcegroups) extensions.
 
-        GitHub Repositories
-        github.remotehub
-            Browse, search, edit, and commit to any remote GitHub repository directly from within Visual Studio Code.
+    GitHub Repositories
+    github.remotehub
+      Browse, search, edit, and commit to any remote GitHub repository directly from within Visual Studio Code.
 
-        SQL Server (mssql) for Visual Studio Code
-        ms-mssql.mssql
-            For developing Microsoft SQL Server, Azure SQL Database, and SQL Data Warehouse everywhere with a rich set of functionalities.
+    SQL Server (mssql) for Visual Studio Code
+    ms-mssql.mssql
+      For developing Microsoft SQL Server, Azure SQL Database, and SQL Data Warehouse everywhere with a rich set of functionalities.
 
-        Protobuf 3 support for Visual Studio Code
-        zxh404.vscode-proto3
-            Syntax highlighting, syntax validation, code snippets, code completion, code formatting, brace matching, and line and block commenting.
+    Protobuf 3 support for Visual Studio Code
+    zxh404.vscode-proto3
+      Syntax highlighting, syntax validation, code snippets, code completion, code formatting, brace matching, and line and block commenting.
 
 GitHub
-    https://github.com/markjprice/cs10dotnet6.git
-    https://github.com/markjprice/cs10dotnet6
-    https://github.dev/markjprice/cs10dotnet6
-    https://github.com/markjprice/cs10dotnet6
-    https://github.com/markjprice/cs10dotnet6/blob/main/docs/code-editors
-    https://github.com/markjprice/cs10dotnet6/tree/main/vs4win
-    https://github.com/markjprice/cs10dotnet6/tree/main/vscode
-    https://github.com/markjprice/cs10dotnet6/tree/main/notebooks
-    https://github.com/markjprice/cs10dotnet6/issues
+  https://github.com/markjprice/cs10dotnet6.git
+  https://github.com/markjprice/cs10dotnet6
+  https://github.dev/markjprice/cs10dotnet6
+  https://github.com/markjprice/cs10dotnet6
+  https://github.com/markjprice/cs10dotnet6/blob/main/docs/code-editors
+  https://github.com/markjprice/cs10dotnet6/tree/main/vs4win
+  https://github.com/markjprice/cs10dotnet6/tree/main/vscode
+  https://github.com/markjprice/cs10dotnet6/tree/main/notebooks
+  https://github.com/markjprice/cs10dotnet6/issues
 
 Links
-    https://static.packt-cdn.com/downloads/9781801077361_Bonus_Content.pdf
-    https://github.com/markjprice/cs10dotnet6/blob/main/9781801077361_Bonus_Content.pdf
-    https://github.com/markjprice/cs9dotnet5-extras/blob/main/raspberry-pi-ubuntu64/README.md
-    https://devblogs.microsoft.com/dotnet/supporting-the-community-with-wf-and-wcf-oss-projects/
-    https://github.com/FritzAndFriends/BlazorWebFormsComponents
-    https://themesof.net/
+  https://static.packt-cdn.com/downloads/9781801077361_Bonus_Content.pdf
+  https://github.com/markjprice/cs10dotnet6/blob/main/9781801077361_Bonus_Content.pdf
+  https://github.com/markjprice/cs9dotnet5-extras/blob/main/raspberry-pi-ubuntu64/README.md
+  https://devblogs.microsoft.com/dotnet/supporting-the-community-with-wf-and-wcf-oss-projects/
+  https://github.com/FritzAndFriends/BlazorWebFormsComponents
+  https://themesof.net/
 
 Standards
-    C# language design
-        https://github.com/dotnet/csharplang
+  C# language design
+    https://github.com/dotnet/csharplang
 
-    Compiler implementation
-        https://github.com/dotnet/roslyn
+  Compiler implementation
+    https://github.com/dotnet/roslyn
 
-    Standard to describe the language
-        https://github.com/dotnet/csharpstandard
+  Standard to describe the language
+    https://github.com/dotnet/csharpstandard
 

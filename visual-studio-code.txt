@@ -1,6 +1,6 @@
 Keyboards
-    https://docs.microsoft.com/en-us/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.
+  https://docs.microsoft.com/en-us/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.
 
-    Windows: https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
-    macOS: https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf
-    Linux: https://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf
+  Windows: https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
+  macOS: https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf
+  Linux: https://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf

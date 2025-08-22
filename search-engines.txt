@@ -1,6 +1,6 @@
 Stack Overflow
-    DuckDuckGo
-        !so <searching expression>
+  DuckDuckGo
+    !so <searching expression>
 
-    Google
-        garbage collection site:stackoverflow.com +C# -Java
+  Google
+    garbage collection site:stackoverflow.com +C# -Java

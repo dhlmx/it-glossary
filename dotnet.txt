@@ -1,41 +1,39 @@
 dotnet
-    --list-sdks
-    --list-runtimes
+  --list-sdks
+  --list-runtimes
 
-    --version
+  --version
 
-    clean
+  clean
 
-    help
-        help new
+  help
+    help new
 
-    new
-        new console -f <frameworkRelease>
-            --https://aka.ms/new-console-template for more information
+  new
+    new console -f <frameworkRelease>
+      --https://aka.ms/new-console-template for more information
 
-            7, 7.1, 7.2, 7.3, 8, 9, 10
-                Entering a specific version number will use that compiler if it has been installed.
+      7, 7.1, 7.2, 7.3, 8, 9, 10
+        Entering a specific version number will use that compiler if it has been installed.
 
-            latestmajor
-                Uses the highest major number, for example, 7.0 in August 2019, 8.0 in October 2019, 9.0 in November 2020, 10.0 in November 2021.
+      latestmajor
+        Uses the highest major number, for example, 7.0 in August 2019, 8.0 in October 2019, 9.0 in November 2020, 10.0 in November 2021.
 
-            latest
-                Uses the highest major and highest minor number, for example, 7.2 in 2017, 7.3 in 2018, 8 in 2019, perhaps 10.1 in early 2022.
+      latest
+        Uses the highest major and highest minor number, for example, 7.2 in 2017, 7.3 in 2018, 8 in 2019, perhaps 10.1 in early 2022.
 
-            preview
-                Uses the highest available preview version, for example, 10.0 in July 2021 with .NET 6.0 Preview 6 installed.
-
-
-        new console -h
-
-    run
+      preview
+        Uses the highest available preview version, for example, 10.0 in July 2021 with .NET 6.0 Preview 6 installed.
 
 
+    new console -h
+
+  run
 
 dotnet-core-uninstall remove --all-previews-but-latest --sdk 
 
 Links
-    https://dotnetfiddle.net/
-    https://devblogs.microsoft.com/dotnet/
-    http://computerstufftheydidntteachyou.com/
+  https://dotnetfiddle.net/
+  https://devblogs.microsoft.com/dotnet/
+  http://computerstufftheydidntteachyou.com/
 

@@ -21,6 +21,7 @@ IaaS: Infrastructure-as-a-Service
 JSON: JavaScript Object Notation
 
 LQS: Live Query Statistics
+LTS: Long-Term Support
 
 OData: Open Data Protocol
 ODBC: Open Database Connectivity

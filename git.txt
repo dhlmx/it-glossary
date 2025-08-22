@@ -1,3 +1,137 @@
-Links
-    https://git-scm.com/download
-    https://desktop.github.com
+Add or Stage a Snapshot
+  git add   
+  git add <.|*>
+
+Branchs
+  Create a new branch
+    git branch 
+  
+  List branches
+    git branch
+
+  List remote branches
+    git branch -r
+
+  Delete a branch
+    git branch -d 
+
+    Force the removal of an unmerged branch
+      git branch -D 
+
+
+Checkout
+  git checkout /
+
+  Create and checkout a branch
+    git checkout [-b ]
+
+
+Clean
+  git clean -f
+
+
+Clone
+  git clone <repository-path|repository-url> 
+
+Commit
+  Commit and save a comment
+    git commit [-m ""]
+
+  Stage all files and commit with a comment
+    git commit [-a -m ""]
+
+  Add staged changes to the most recent commit instead of creating a new one
+    git commit --amend
+
+Fetch remote branchs
+  git fetch 
+
+Identity
+  git config [--global] user.email "<you@example.com>"
+  git config [--global] user.name ""
+
+Init
+  git init [--bare] []
+
+Log (navigation: space, q)
+  git log [--oneline] [-n ] [--stat]
+
+  Compare branch's history
+    git log ..
+    git log ..
+    git log <HEAD~n>..
+
+    Statistics (Example)
+      git log.. --stat
+    
+    Compare repository's branches history
+      git log ../
+      git log <remote-repository/..
+
+
+Merge (In current branch)
+  git merge 
+
+  Force a merge commit even if git could do a fast-forward merge
+    git merge --no-ff   
+    
+    Conflicts
+    <<<<<<<<<< HEAD
+      Current Branch HEAD
+    ==========
+      New Branch
+    >>>>>>>>>>
+
+Push (Current branch)
+  git push 
+
+Rebase
+  git checkout (step previous)
+  git rebase <target-branch|randomID>
+  git log --oneline (verification)
+
+  Interactive mode
+    git rebase -i
+
+  Continue after the interactive rebase
+    git rebase --continue
+
+  Abort the current interactive rebase and return the repository to its former state
+    git rebase --abort
+
+Reflog (navigation: space, q)
+  git reflog [-n ]
+
+Remote repositories
+  git remote
+  git remote -v
+
+  Add a remote repository
+    git remote add
+
+  Remove a remote repository
+    git remote rm
+
+Remove (File)
+  git rm
+
+Reset (Move the checked out snapshot to a new commit)
+  Preserve the working directory
+    git reset --mixed
+
+  Reset to the commit "n" before the current HEAD
+    git reset HEAD~n
+    git reset --mixed HEAD~1
+
+  Force reset
+      git reset --hard
+
+Revert
+  git revert
+
+Status
+  git status
+
+Tag
+  git tag
+  git tag -a  -m ""

@@ -34,5 +34,5 @@ RLS: Row-Level Security
 
 SaaS: Software as a Service
 SKU: 
-SRID: spatial reference identifier
+SRID: Spatial Reference Identifier
 SSIS: SQL Server Integration Services

@@ -126,11 +126,11 @@ Tracing
 GitHub
   https://github.com/markjprice/cs10dotnet6.git
   https://github.com/markjprice/cs10dotnet6
-  https://github.dev/markjprice/cs10dotnet6
-  https://github.com/markjprice/cs10dotnet6
   https://github.com/markjprice/cs10dotnet6/blob/main/docs/code-editors
-  https://github.com/markjprice/cs10dotnet6/blob/main/9781801077361_Bonus_Content.pdf
+  https://github.com/markjprice/cs10dotnet6/blob/main/book-links.md#chapter-2---speaking-c
+  https://github.com/markjprice/cs10dotnet6/blob/main/book-links.md#chapter-3---controlling-flow-and-converting-types
   https://github.com/markjprice/cs10dotnet6/blob/main/book-links.md#chapter-4---writing-debugging-and-testing-functions
+  https://github.com/markjprice/cs10dotnet6/blob/main/9781801077361_Bonus_Content.pdf
   https://github.com/markjprice/cs10dotnet6/tree/main/vs4win
   https://github.com/markjprice/cs10dotnet6/tree/main/vscode
   https://github.com/markjprice/cs10dotnet6/tree/main/notebooks
@@ -142,6 +142,8 @@ Links
   https://devblogs.microsoft.com/dotnet/supporting-the-community-with-wf-and-wcf-oss-projects/
   https://github.com/FritzAndFriends/BlazorWebFormsComponents
   https://themesof.net/
+  https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#table-of-format-specifiers
+  
 
 
 

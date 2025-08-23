@@ -6,6 +6,7 @@ DAX: Data Analysis Expressions
 DBA: Database Administrator
 DDL: Data Definition Language
 DIE: DROP IF EXISTS
+DRY: Don't Repeat Yourself
 DML: Data Modification Language
 DMV: Dynamic Management Views
 

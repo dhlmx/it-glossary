@@ -22,3 +22,26 @@ Numbers
   D: infers double
   F: infers float
 
+This style of if statement should be avoided because it can introduce serious bugs, for example, the infamous #gotofail bug in Apple's iPhone iOS operating system.
+
+For 18 months after Apple's iOS 6 was released, in September 2012, it had a bug in its Secure Sockets Layer (SSL) encryption code, which meant that any user running Safari, the device's web browser, who tried to connect to secure websites, such as their bank, was not properly secure because an important check was being accidentally skipped.
+
+Just because you can leave out the curly braces doesn't mean you should. Your code is not "more efficient" without them; instead, it is less maintainable and potentially more dangerous.
+
+--
+
+This rule is known as Banker's Rounding, and it is preferred because it reduces bias by alternating when it rounds up or down. Sadly, other languages such as JavaScript use the primary school rule.
+
+It always rounds down if the decimal part is less than the midpoint .5.
+It always rounds up if the decimal part is more than the midpoint .5.
+It will round up if the decimal part is the midpoint .5 and the non-decimal part is odd, but it will round down if the non-decimal part is even.
+
+--
+
+The safest thing to do is to convert the binary object into a string of safe characters. Programmers call this Base64 encoding.
+
+
+mumat.matcuer.unam.mx
+redato
+GEMA, ENI CONACHYT
+renajeb

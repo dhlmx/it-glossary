@@ -4,6 +4,17 @@ dotnet
 
   --version
 
+  add
+    package <package>
+      dotnet add package Microsoft.Extensions.Configuration
+
+    reference <project>
+
+    sln add <path/ProjectName.csproj>
+
+  build
+    dotnet build
+
   clean
 
   help
@@ -27,8 +38,14 @@ dotnet
 
 
     new console -h
+    new classlib -n <classlibName>
+    new xunit -n <xunitName>
+    
 
   run
+     run --configuration <Debug|Release>
+
+  test
 
 dotnet-core-uninstall remove --all-previews-but-latest --sdk 
 

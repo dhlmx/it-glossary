@@ -1,3 +1,5 @@
+AAA: Arrange, Act, Assert
+
 CRM: Customer Relationship Management
 
 DAX: Data Analysis Expressions
@@ -36,3 +38,5 @@ SaaS: Software as a Service
 SKU: 
 SRID: Spatial Reference Identifier
 SSIS: SQL Server Integration Services
+
+TDD: Test-Driven Development

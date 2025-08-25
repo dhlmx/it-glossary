@@ -262,6 +262,17 @@ It will round up if the decimal part is the midpoint .5 and the non-decimal part
 
 The safest thing to do is to convert the binary object into a string of safe characters. Programmers call this Base64 encoding.
 
+When a parameter is passed into a method, it can be passed in one of three ways:
+
+By value (this is the default): Think of these as being in-only.
+By reference as a ref parameter: Think of these as being in-and-out.
+As an out parameter: Think of these as being out-only.
+
+When passing a variable as a parameter by default, its current value gets passed, not the variable itself. Therefore, x has a copy of the value of the a variable. The a variable retains its original value of 10.
+When passing a variable as a ref parameter, a reference to the variable gets passed into the method. Therefore, y is a reference to b. The b variable gets incremented when the y parameter gets incremented.
+When passing a variable as an out parameter, a reference to the variable gets passed into the method. Therefore, z is a reference to c. The value of the c variable gets replaced by whatever code executes inside the method. We could simplify the code in the Main method by not assigning the value 30 to the c variable since it will always be replaced anyway.
+
+--
 
 mumat.matcuer.unam.mx
 redato

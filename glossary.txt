@@ -4,8 +4,9 @@ CRM: Customer Relationship Management
 
 DAX: Data Analysis Expressions
 DBA: Database Administrator
+DDD: Domain-Driven Design
 DDL: Data Definition Language
-DIE: DROP IF EXISTS
+DIE: Drop if exists
 DRY: Don't Repeat Yourself
 DML: Data Modification Language
 DMV: Dynamic Management Views
@@ -32,12 +33,20 @@ OLE DB: Object Linking and Embedding Database
 OLTP: Online Transaction Processing
 
 PaaS: Platform as a Service
+POC: Proof of Concept
 
 RLS: Row-Level Security
+RVSP: 
 
 SaaS: Software as a Service
-SKU: 
+SKU: Stock Keeping Unit
+SME: Subject Matter Expert
 SRID: Spatial Reference Identifier
 SSIS: SQL Server Integration Services
 
 TDD: Test-Driven Development
+
+XML: eXtensible Markup Language
+
+YAML: YAML Ain't Markup Language
+

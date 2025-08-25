@@ -1,0 +1,33 @@
+Instalación SDKs (Compilation bug)
+
+  Paso 00: PSShell as Administrator
+  Paso 01: Install with winget
+    winget install Microsoft.DotNet.SDK.6
+    winget install Microsoft.DotNet.SDK.7
+  
+    Runtimes:
+      winget install Microsoft.DotNet.DesktopRuntime.6
+      winget install Microsoft.DotNet.AspNetCore.6
+      winget install Microsoft.DotNet.Runtime.6
+
+      winget install Microsoft.DotNet.DesktopRuntime.7
+      winget install Microsoft.DotNet.AspNetCore.7
+      winget install Microsoft.DotNet.Runtime.7
+
+  Paso 02: Location of DotNet
+    where.exe dotnet
+      C:Program Filesdotnetdotnet.exe
+      C:Program Files (x86)dotnetdotnet.exe
+
+TESTING xUnit
+  dotnet test --loger "console;verbosity=detailed"
+
+dotnet ef migrations add Identity --context IdentityDataContext
+
+dotnet ef database update --context DataContext
+dotnet ef database update --context IdentityDataContext
+dotnet sql-cache create "Server=<host>,<port>;Database=<database>;User Id=<userId>;Password=<password>;MultipleActiveResultSets=true" "dbo" "SessionData"
+
+Gravedad    Código    Descripción    Proyecto    Archivo    Línea    Estado suprimido
+Advertencia    CS0618    "BuilderExtensions.UseIdentity(IApplicationBuilder)" está obsoleto: "This method is obsolete and will be removed in a future version. The recommended alternative is UseAuthentication(). See https://go.microsoft.com/fwlink/?linkid=845470"    SportsStore    E:ProyectosNETAngularEssentialAngularForASPNETCoreMVCChapter11SportsStoreStartup.cs    85    Activo
+

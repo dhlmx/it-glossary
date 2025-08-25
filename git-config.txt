@@ -1,0 +1,7 @@
+Configuration
+    git config --global user.name "<userName>"
+    git config --global user.email "<userEmail>"
+    git config --global core.editor "<editor>"
+    git config --global core.autocrlf <true|false> | input | safe 
+    git config --global core.safecrlf <true|false> | warn | die
+

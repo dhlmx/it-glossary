@@ -1,3 +1,225 @@
+Mark J. Price C# 10 and NET 6
+
+https://github.com/markjprice/cs10dotnet6
+
+https://github.com/markjprice/cs9dotnet5-extras/blob/main/raspberry-pi-ubuntu64/README.md
+
+
+Types & Variables
+
+• Literal string:
+  Characters enclosed in double-quote characters. They can use escape characters like 	 for tab. To represent a backslash, use two: .
+
+• Verbatim string:
+  A literal string prefixed with @ to disable escape characters so that a backslash is a backslash. It also allows the string value to span
+  multiple lines because the white space characters are treated as themselves instead of instructions to the compiler.
+
+• Interpolated string:
+  A literal string prefixed with $ to enable embedded formatted variables. You will learn more about this later in this chapter.
+
+Examples:
+  char x = 'a';
+  string y = "abcdef"; string fullNameWithTabSeparator = "Bob	Smith";
+  string filePath = @"C:	elevisionssonyravia.txt";
+  string multiline = $"The variable {nameof(heightInMetres)} has the value {heightInMetres}."
+
+Numbers
+  // unsigned integer means positive whole number or 0
+  uint naturalNumber = 23;
+  
+  // integer means negative or positive whole number or 0
+  int integerNumber = -23;
+
+  // float means single-precision floating point (F suffix makes it a float literal)
+  float realNumber = 2.3F;
+
+  // double means double-precision floating point
+  double anotherRealNumber = 2.3; // double literal
+
+  // Improving legibility
+  uint x = 1_000_000;
+  unint indianY = 10_00_000; // use the 2/3 grouping common in India
+
+  // three variables that store the number 2 million
+  int decimalNotation = 2_000_000;
+  int binaryNotation = 0b_0001_1110_1000_0100_1000_0000;
+  int hexadecimalNotation = 0x_001E_8480;
+
+  Console.WriteLine("Using doubles:");
+  double a = 0.1;
+  double b = 0.2;
+
+  if (a + b == 0.3)
+  {
+    Console.WriteLine($"{a} + {b} equals {0.3}");
+  }
+  else
+  {
+    Console.WriteLine($"{a} + {b} does NOT equal {0.3}");
+  }
+
+  Output:
+    Using doubles:
+    0.1 + 0.2 does NOT equal 0.3
+
+  decimal c = 0.1M; // M suffix means a decimal literal value
+  decimal d = 0.2M;
+
+  if (c + d == 0.3M)
+  {
+    Console.WriteLine($"{c} + {d} equals {0.3M}");
+  }
+  else
+  {
+    Console.WriteLine($"{c} + {d} does NOT equal {0.3M}");
+  }
+
+  Output:
+    Using decimals:
+    0.1 + 0.2 equals 0.3
+
+  Good Practice: Never compare double values using ==. During the First
+  Gulf War, an American Patriot missile battery used double values in its
+  calculations. The inaccuracy caused it to fail to track and intercept an incoming
+  Iraqi Scud missile, and 28 soldiers were killed; you can read about this at
+  https://www.ima.umn.edu/~arnold/disasters/patriot.html.
+
+  Inferring types of variables
+  
+  • L: infers long
+  • UL: infers ulong
+  • M: infers decimal
+  • D: infers double
+  • F: infers float
+
+  var x = 0.16M;
+  var y = 0.0.16D;
+
+Target Types
+  XmlDocument xml3 = new(); // target-typed new in C# 9 or later
+
+  class Person
+  {
+    public DateTime BirthDate;
+  }
+
+  Person kim = new();
+  kim.BirthDate = new(1967, 12, 26); // instead of: new DateTime(1967, 12, 26)
+
+Default value for types
+
+  Console.WriteLine($"default(int) = {default(int)}");
+  Console.WriteLine($"default(bool) = {default(bool)}");
+  Console.WriteLine($"default(DateTime) = {default(DateTime)}");
+  Console.WriteLine($"default(string) = {default(string)}");
+
+  Output:
+    default(int) = 0
+    default(bool) = False
+    default(DateTime) = 01/01/0001 00:00:00
+    default(string) =
+
+Arrays
+  string[] names; // can reference any size array of strings
+
+  names = new string[4]; // allocating memory for four strings in an array
+  
+  // OR
+  string[] names2 = new[] { "Kate", "Jack", "Rebecca", "Tom" };
+  
+  // storing items at index positions
+  names[0] = "Kate";
+  names[1] = "Jack";
+  names[2] = "Rebecca";
+  names[3] = "Tom";
+
+  // looping through the names
+  for (int i = 0; i < names.Length; i++)
+  {
+   Console.WriteLine(names[i]);  // output the item at index position i
+  }
+
+Memory
+  Stack
+    Faster -> CPU -> Last-In -> First Out -> L1 and L2 -> Limited size
+    Value Type -> record struct, struct
+
+  Heap
+    Slower -> More plentiful
+    Reference Types -> record, class
+
+Structure Types
+  Number: byte, sbyte, short, ushort, int, unint, long, ulong, float, double, decimal
+  Other: char, DateTime, bool
+  Drawing: Color, Point, Rectangle
+
+
+Finalizer
+
+  public class Animal
+  {
+    public Animal() // constructor
+    {
+      // allocate any unmanaged resources
+    }
+
+    ~Animal() // Finalizer aka destructor
+    {
+      // deallocate any unmanaged resources
+    }
+  }
+
+  public class Animal : IDisposable
+  {
+
+    public Animal()
+    {
+      // allocate unmanaged resource
+    }
+
+    ~Animal() // Finalizer
+    {
+      Dispose(false);
+    }
+
+    bool disposed = false; // have resources been released?
+
+    public void Dispose()
+    {
+      Dispose(true);
+
+      // tell garbage collector it does not need to call the finalizer
+      GC.SuppressFinalize(this);
+    }
+
+    protected virtual void Dispose(bool disposing)
+    {
+      if (disposed) return;
+      
+      // deallocate the *unmanaged* resource
+      // ...
+      if (disposing)
+      {
+        // deallocate any other *managed* resources
+        // ...
+      }
+
+      disposed = true;
+    }
+  }
+
+
+  using (Animal a = new())
+  {
+    // code that uses the Animal instance
+  }
+
+
+
+
+
+
+
 Literal string:
   Characters enclosed in double-quote characters. They can use escape characters like \t for tab. To represent a backslash, use two: \\.
 Verbatim string:

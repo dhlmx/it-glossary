@@ -1,0 +1,168 @@
+Administration
+  User
+    az acr update -n <...> --admin-enabled <false|true>
+    az acr update -n packtbook --admin-enabled true
+
+Container App
+  Environment
+    Create
+      az containerapp env create --name <...> --resource-group <...> --location <...>
+      az containerapp env create --name chapter05env --resource-group chapter05 --location centralus
+
+  Container App
+    Create
+      az containerapp create --name <...> --resource-group <...> --environment <...> --image /: --target-port <...>
+      az containerapp create --name webapi --resource-group chapter05 --environment chapter05env --image packtbookchapter05.azurecr.io/webapi:latest --target-port 80
+
+  --ingress 'external' --registry-server packtbookchapter05.azurecr.io --query properties.configuration.ingress.fqdn
+
+
+Container Registry
+  Create
+    az acr create --resource-group --name --sku Basic
+
+  List Repositories
+    az acr repository list --name  --output table
+    az acr repository list --name packtbook --output table
+
+  Login
+    az acr login --name 
+    az acr login --name packtbookchapter05
+
+
+Key Vault
+  Create
+    az group create --name  --location "CentralUS"|"..."
+    az keyvault create --name  --resource-group  --location "CentralUS"|"..."
+
+  Delete
+    az group delete --name 
+
+
+Login  az login
+
+
+Password Query
+ az acr credential show --name --query [username,passwords[0].value]
+ az acr credential show --name packtbook --query [username,passwords[0].value]
+
+
+Resource Group
+  --Create
+    az group create --name  --location 
+
+  --Delete
+  az group delete --name 
+
+
+Version
+  az version
+
+
+Creation of an App Service and a Web App (Example)
+  az group create --name chapter2-example --location centralus
+
+  az appservice plan create --name chapter2-app-plan --resource-group chapter2-example --location centralus --is-linux --sku B1
+
+  az webapp create --name packtbook-app-service --plan chapter2-app-plan --resource-group chapter2-example --deployment-container-image-name packtbook.azurecr.io/chapter2:1.0.0
+
+  az webapp create --name packtbook-app-service --plan chapter2-app-plan --resource-group chapter2-example --deployment-container-image-name packtbook.azurecr.io/chapter2:1.0.0 --docker-registry-server-password Hrs95JY4KMFxxMnwX4DD3VMZR0rGH39Ykp05wya+ACRBvnvxs --docker-registry-server-user packtbook
+
+
+Creation Function Identity
+  az identity create -g  -n 
+  az identity create -g demoapp-rg -n funcapp-mi
+
+
+  Examples:
+    --Create Resource Group
+    az group create --name chapter05 --location centralus
+
+    --Create App Container Registry
+    az acr create --resource-group chapter05 --name packtbookchapter05 --sku Basic --admin-enabled true
+
+
+Azure Blob
+  Resource Group
+    Create
+      az group create --name   --location <...>  { ... }
+      az group create --name storage-rg --location eastus
+    {
+       "id": "/subscriptions//resourceGroups/storage-rg",
+       "location": "eastus",
+       "managedBy": null,
+       "name": "storage-rg",
+       "properties": {
+          "provisioningState": "Succeeded"
+       },
+       "tags": null,
+       "type": "Microsoft.Resources/resourceGroups"
+    }
+
+
+  Creation Storage
+    az storage account create 
+    --name  
+    --resource-group  
+    --location  
+    --sku Standard_RAGRS 
+    --kind StorageV2 
+    --min-tls-version TLS1_2 
+    --access-tier 
+    
+    Example
+      az storage account create 
+      --name netdeveloperforazuredemo 
+      --resource-group storage-rg 
+      --location eastus 
+      --sku Standard_RAGRS 
+      --kind StorageV2 
+      --min-tls-version TLS1_2 
+      --access-tier 
+
+
+  Creation Storage Container
+    az storage container create 
+    --account-name  
+    --name  
+    --auth-mode login
+    {
+      "created": true
+    }
+
+    Example:
+      az storage container create 
+      --account-name netdeveloperforazuredemo 
+      --name blob-content 
+      --auth-mode login
+      {
+        "created": true
+      }
+
+
+Creation Rule Policy
+  az storage account management-policy create 
+  --account-name  
+  --resource-group  
+  --policy @[path/to/your/manageProfileImages.json]
+
+
+  az storage account management-policy create 
+  --account-name  
+  --resource-group  
+  --policy @[path/to/your/moveToCoolAfter30Days.json]
+
+
+Azure CosmosDB
+
+  Account
+    Create
+      az cosmosdb create --name  --resource-group  
+        --locations regionName='Canada Central' failoverPriority=0 isZoneRedundant=<false|true> 
+        --locations regionName='Canada East' failoverPriority=1 isZoneRedundant=<false|true> 
+        --default-consistency-level <Session|BoundedStaleness|etc> --kind GlobalDocumentDB
+
+  Connection
+    Retrieve Information
+      az cosmosdb show --name  --resource-group 
+

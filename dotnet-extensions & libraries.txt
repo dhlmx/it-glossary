@@ -1,0 +1,24 @@
+AspNetCore.Diagnostics.HealthChecks
+  https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks
+  https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks?tab=readme-ov-file#HealthCheckUI
+
+FluentValidation
+  https://github.com/FluentValidation/FluentValidation
+  https://www.nuget.org/packages/FluentValidation/12.0.0-preview1
+  https://www.nuget.org/packages/FluentValidation.DependencyInjectionExtensions/12.0.0-preview1
+  https://www.nuget.org/packages/FluentValidation.AspNetCore
+
+Carter
+  https://github.com/CarterCommunity/Carter
+  https://www.nuget.org/packages/Carter
+
+Mapster
+  https://github.com/MapsterMapper/Mapster
+  https://www.nuget.org/packages/Mapster/7.4.2-pre02
+
+Marten
+  https://martendb.io/
+  https://www.nuget.org/packages/Marten
+
+Math.NET Numerics
+  https://numerics.mathdotnet.com/

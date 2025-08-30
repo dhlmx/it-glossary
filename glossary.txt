@@ -21,6 +21,7 @@ HRM: Human Resource Management
 HTAP: Hybrid Transactional and Analytical Processing
 
 IaaS: Infrastructure-as-a-Service
+IMHO: In My Humble Opinion
 
 JSON: JavaScript Object Notation
 

@@ -131,6 +131,7 @@ GitHub
   https://github.com/markjprice/cs10dotnet6/blob/main/book-links.md#chapter-3---controlling-flow-and-converting-types
   https://github.com/markjprice/cs10dotnet6/blob/main/book-links.md#chapter-4---writing-debugging-and-testing-functions
   https://github.com/markjprice/cs10dotnet6/blob/main/book-links.md#chapter-5---building-your-own-types-with-object-oriented-programming
+  https://github.com/markjprice/cs10dotnet6/blob/main/book-links.md#chapter-6---implementing-interfaces-and-inheriting-classes
   https://github.com/markjprice/cs10dotnet6/blob/main/9781801077361_Bonus_Content.pdf
   https://github.com/markjprice/cs10dotnet6/tree/main/vs4win
   https://github.com/markjprice/cs10dotnet6/tree/main/vscode

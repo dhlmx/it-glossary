@@ -274,7 +274,139 @@ When passing a variable as an out parameter, a reference to the variable gets pa
 
 --
 
+There are two categories of memory: stack memory and heap memory. With modern operating systems, the stack and heap can be anywhere in physical or virtual memory.
+
+Stack memory is faster to work with (because it is managed directly by the CPU and because it uses a last-in, first-out mechanism, it is more likely to have the data in its L1 or L2 cache) but limited in size, while heap memory is slower but much more plentiful.
+
+--
+
+These are the most common struct types:
+
+Number System types: byte, sbyte, short, ushort, int, uint, long, ulong, float, double, and decimal
+
+Other System types: char, DateTime, and bool
+
+System.Drawing types: Color, Point, and Rectangle
+
+Almost all the other types are class types, including string.
+
+Apart from the difference in terms of where in memory the data for a type is stored, the other major difference is that you cannot inherit from a struct.
+
+--
+
+Good Practice: If the total bytes used by all the fields in your type is 16 bytes or less, your type only uses value types for its fields, and you will never want to derive from your type, then Microsoft recommends that you use struct. If your type uses more than 16 bytes of stack memory, if it uses reference types for its fields, or if you might want to inherit from it, then use class.
+
+--
+
+Releasing unmanaged resources
+
+In the previous chapter, we saw that constructors can be used to initialize fields and that a type may have multiple constructors. Imagine that a constructor allocates an unmanaged resource; that is, anything that is not controlled by .NET, such as a file or mutex under the control of the operating system. The unmanaged resource must be manually released because .NET cannot do it for us using its automatic garbage collection feature.
+
+--
+
+There are two Dispose methods, one public and one protected:
+
+    The public void Dispose method will be called by a developer using your type. When called, both unmanaged and managed resources need to be deallocated.
+    The protected virtual void Dispose method with a bool parameter is used internally to implement the deallocation of resources. It needs to check the disposing parameter and disposed field because if the finalizer thread has already run and it called the ~Animal method, then only unmanaged resources need to be deallocated.
+
+--
+
+Enabling nullable and non-nullable reference types
+
+To enable the feature at the project level, add the following to your project file:
+
+<PropertyGroup>
+  ...
+  <Nullable>enable</Nullable>
+</PropertyGroup>
+CopyExplain
+
+This is now done by default in project templates that target .NET 6.0.
+
+To disable the feature at the file level, add the following to the top of a code file:
+
+#nullable disable
+CopyExplain
+
+To enable the feature at the file level, add the following to the top of a code file:
+
+#nullable enable
+
+--
+
+C# 7 introduced is combined with the ! (not) operator as an alternative to !=, as shown in the following code:
+
+if (!(thisCouldBeNull is null))
+{
+CopyExplain
+
+C# 9 introduced is not as an even clearer alternative, as shown in the following code:
+
+if (thisCouldBeNull is not null)
+{
+CopyExplain
+
+If you are trying to use a member of a variable that might be null, use the null-conditional operator ?., as shown in the following code:
+
+string authorName = null;
+// the following throws a NullReferenceException
+int x = authorName.Length;
+// instead of throwing an exception, null is assigned to y
+int? y = authorName?.Length;
+CopyExplain
+
+Sometimes you want to either assign a variable to a result or use an alternative value, such as 3, if the variable is null. You do this using the null-coalescing operator, ??, as shown in the following code:
+
+// result will be 3 if authorName?.Length is null 
+int result = authorName?.Length ?? 3; 
+Console.WriteLine(result);
+CopyExplain
+
+Good Practice: Even if you enable nullable reference types, you should still check non-nullable parameters for null and throw an ArgumentNullException.
+
+--
+
+Alternatively, you can use the as keyword to cast. Instead of throwing an exception, the as keyword returns null if the type cannot be cast.
+
+--
+
+Understanding common StyleCop recommendations
+
+Inside a code file, you should order the contents, as shown in the following list:
+
+    External alias directives
+    Using directives
+    Namespaces
+    Delegates
+    Enums
+    Interfaces
+    Structs
+    Classes
+
+Within a class, record, struct, or interface, you should order the contents, as shown in the following list:
+
+    Fields
+    Constructors
+    Destructors (finalizers)
+    Delegates
+    Events
+    Enums
+    Interfaces
+    Properties
+    Indexers
+    Methods
+    Structs
+    Nested classes and records
+
+Good Practice: You can learn about all the StyleCop rules at the following link: https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/master/DOCUMENTATION.md.
+
+--
+
+
+
 mumat.matcuer.unam.mx
 redato
 GEMA, ENI CONACHYT
 renajeb
+
+

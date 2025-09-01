@@ -402,7 +402,70 @@ Good Practice: You can learn about all the StyleCop rules at the following link:
 
 --
 
+.NET Core 2.0 and later's support for a minimum of .NET Standard 2.0 is important because it provides many of the APIs that were missing from the first version of .NET Core. The 15 years' worth of libraries and applications that .NET Framework developers had available to them that are relevant for modern development have now been migrated to .NET and can run cross-platform on macOS and Linux variants, as well as on Windows.
 
+.NET Standard 2.1 added about 3,000 new APIs. Some of those APIs need runtime changes that would break backward compatibility, so .NET Framework 4.8 only implements .NET Standard 2.0. .NET Core 3.0, Xamarin, Mono, and Unity implement .NET Standard 2.1.
+
+.NET 6 removes the need for .NET Standard if all your projects can use .NET 6. Since you might still need to create class libraries for legacy .NET Framework projects or legacy Xamarin mobile apps, there is still a need to create .NET Standard 2.0 and 2.1 class libraries. In March 2021, I surveyed professional developers, and half still needed to create .NET Standard 2.0 compliant class libraries.
+
+Now that .NET 6 has been released with preview support for mobile and desktop apps built using .NET MAUI, the need for .NET Standard has been further reduced.
+
+NET Core 1.x: much smaller API compared to .NET Framework 4.6.1, which was the current version in March 2016.
+.NET Core 2.x: reached API parity with .NET Framework 4.7.1 for modern APIs because they both implement .NET Standard 2.0.
+.NET Core 3.x: larger API compared to .NET Framework for modern APIs because.NET Framework 4.8 does not implement .NET Standard 2.1.
+.NET 5: even larger API compared to .NET Framework 4.8 for modern APIs, with much-improved performance.
+.NET 6: final unification with the support for mobile apps in .NET MAUI, expected by May 2022.
+
+--
+
+.NET is made up of several pieces, which are shown in the following list:
+
+Language compilers: These turn your source code written with languages such as C#, F#, and Visual Basic into intermediate language (IL) code stored in assemblies. With C# 6.0 and later, Microsoft switched to an open-source rewritten compiler known as Roslyn that is also used by Visual Basic.
+Common Language Runtime (CoreCLR): This runtime loads assemblies, compiles the IL code stored in them into native code instructions for your computer's CPU, and executes the code within an environment that manages resources such as threads and memory.
+Base Class Libraries (BCL or CoreFX): These are prebuilt assemblies of types packaged and distributed using NuGet for performing common tasks when building applications. You can use them to quickly build anything you want, rather like combining LEGO™ pieces. .NET Core 2.0 implemented .NET Standard 2.0, which is a superset of all previous versions of .NET Standard, and lifted .NET Core up to parity with .NET Framework and Xamarin. .NET Core 3.0 implemented .NET Standard 2.1, which added new capabilities and enables performance improvements beyond those available in .NET Framework. .NET 6 implements a unified BCL across all types of apps, including mobile.
+
+--
+
+Packages
+  Packages can be easily distributed on public feeds.
+  Packages can be reused.
+  Packages can ship on their own schedule.
+  Packages can be tested independently of other packages.
+  Packages can support different OSes and CPUs by including multiple versions of the same assembly built for different OSes and CPUs.
+  Packages can have dependencies specific to only one library.
+  Apps are smaller because unreferenced packages aren't part of the distribution. The following table lists some of the more important packages and their important types:
+
+  .NET packages each support a set of frameworks. For example, the System.IO.FileSystem package version 4.3.0 supports the following frameworks:
+    .NET Standard, version 1.3 or later.
+    .NET Framework, version 4.6 or later.
+    Six Mono and Xamarin platforms (for example, Xamarin.iOS 1.0).
+--
+
+SDK               Default target framework for new class libraries
+.NET Core 3.1     netstandard2.0
+.NET 5            net5.0
+.NET 6            net6.0
+
+--
+
+Class library target framework        Can be used by projects that target
+netstandard2.0                        .NET Framework 4.6.1 or later, .NET Core 2.0 or later, .NET 5.0 or later, Mono 5.4 or later, Xamarin.Android 8.0 or later, Xamarin.iOS 10.14 or later
+netstandard2.1                        .NET Core 3.0 or later, .NET 5.0 or later, Mono 6.4 or later, Xamarin.Android 10.0 or later, Xamarin.iOS 12.16 or later
+net5.0                                .NET 5.0 or later
+net6.0                                .NET 6.0 or later
+
+--
+
+Type                Product       Description         
+Virtual Machine     VMware        Professionals like malware analysts always run software inside a VM.
+Debugger            SoftICE       Runs underneath the operating system usually in a VM.
+Debugger            WinDbg        Useful for understanding Windows internals because it knows more about Windows data structures than other debuggers.
+Disassembler        IDA Pro       Used by professional malware analysts.
+Decompiler          HexRays       Decompiles C apps. Plugin for IDA Pro.
+Decompiler          DeDe          Decompiles Delphi apps.
+Decompiler          dotPeek       .NET decompiler from JetBrains.
+
+--
 
 mumat.matcuer.unam.mx
 redato

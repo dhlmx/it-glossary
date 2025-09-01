@@ -1,32 +1,26 @@
 dotnet
+  --info
   --list-sdks
   --list-runtimes
-
   --version
 
   add
     package <package>
-      dotnet add package Microsoft.Extensions.Configuration
-
-    reference <project>
-
+    reference <targetProject> <referenceProject>
     sln add <path/ProjectName.csproj>
 
-  build
-    dotnet build
+  build <project>
 
   clean
 
-  help
-    help new
+  help <topic>
+
+  list
 
   new
-    new console -f <frameworkRelease>
-      --https://aka.ms/new-console-template for more information
+    --help / -h
 
-      7, 7.1, 7.2, 7.3, 8, 9, 10
-        Entering a specific version number will use that compiler if it has been installed.
-
+    -f <framework>
       latestmajor
         Uses the highest major number, for example, 7.0 in August 2019, 8.0 in October 2019, 9.0 in November 2020, 10.0 in November 2021.
 
@@ -36,20 +30,45 @@ dotnet
       preview
         Uses the highest available preview version, for example, 10.0 in July 2021 with .NET 6.0 Preview 6 installed.
 
+    --list / -l
+    -n <projectName>
+    -o <outDir>
 
-    new console -h
-    new classlib -n <classlibName>
-    new xunit -n <xunitName>
-    
+    classlib
+    console
+    globaljson --sdk-version <sdkVersion>
+    xunit
 
-  run
-     run --configuration <Debug|Release>
+  pack -c <Debug|Release>
+
+  publish
+    -c <Debug|Release>
+    -r <win-x64|osx-x64|osx-arm64|linux-x64|linux-arm64|others>
+    /p:PublishSingleFile=<false|true>
+    -p:PublishTrimmed=<False|True>
+    -p:TrimMode=<Link|copyused|Others>
+
+  remove
+
+  restore
+
+  run --configuration <Debug|Release>
+
+  sdk check
 
   test
 
-dotnet-core-uninstall remove --all-previews-but-latest --sdk 
+  Update-Package Newtonsoft.Json -ToHighestMinor
+  Update-Package Newtonsoft.Json -ToHighestPatch
+
+  
+
+dotnet-core-uninstall remove --all-previews-but-latest --sdk
+
+dotnet tool install -g upgrade-assistant
 
 Links
+  https://aka.ms/new-console-template
   https://dotnetfiddle.net/
   https://devblogs.microsoft.com/dotnet/
   http://computerstufftheydidntteachyou.com/

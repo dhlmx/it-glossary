@@ -124,28 +124,74 @@ Tracing
   4   Verbose   This will output all levels.
 
 GitHub
-  https://github.com/markjprice/cs10dotnet6.git
+  https://github.com/markjprice/cs9dotnet5-extras/blob/main/raspberry-pi-ubuntu64/README.md
   https://github.com/markjprice/cs10dotnet6
+  https://github.com/markjprice/cs10dotnet6.git
   https://github.com/markjprice/cs10dotnet6/blob/main/docs/code-editors
-  https://github.com/markjprice/cs10dotnet6/blob/main/book-links.md#chapter-2---speaking-c
+  https://github.com/markjprice/cs10dotnet6/blob/main/book-links.md#chapter-2---speaking-c0
   https://github.com/markjprice/cs10dotnet6/blob/main/book-links.md#chapter-3---controlling-flow-and-converting-types
   https://github.com/markjprice/cs10dotnet6/blob/main/book-links.md#chapter-4---writing-debugging-and-testing-functions
   https://github.com/markjprice/cs10dotnet6/blob/main/book-links.md#chapter-5---building-your-own-types-with-object-oriented-programming
   https://github.com/markjprice/cs10dotnet6/blob/main/book-links.md#chapter-6---implementing-interfaces-and-inheriting-classes
+  https://github.com/markjprice/cs10dotnet6/blob/main/book-links.md#chapter-7---understanding-and-packaging-net-types
+  https://github.com/markjprice/cs10dotnet6/blob/main/book-links.md#chapter-8---working-with-common-net-types
+  https://github.com/markjprice/cs10dotnet6/blob/main/vs4win/Chapter07/SharedLibrary/packt-csdotnet-sharedlibrary.png
   https://github.com/markjprice/cs10dotnet6/blob/main/9781801077361_Bonus_Content.pdf
-  https://github.com/markjprice/cs10dotnet6/tree/main/vs4win
-  https://github.com/markjprice/cs10dotnet6/tree/main/vscode
+  https://github.com/markjprice/cs10dotnet6/tree/main/docs/powershell
   https://github.com/markjprice/cs10dotnet6/tree/main/notebooks
+  https://github.com/markjprice/cs10dotnet6/tree/main/vscode
+  https://github.com/markjprice/cs10dotnet6/tree/main/vs4win
+  https://github.com/markjprice/cs10dotnet6/tree/master/Assets/Categories
   https://github.com/markjprice/cs10dotnet6/issues
 
 Links
-  https://static.packt-cdn.com/downloads/9781801077361_Bonus_Content.pdf
-  https://github.com/markjprice/cs9dotnet5-extras/blob/main/raspberry-pi-ubuntu64/README.md
-  https://devblogs.microsoft.com/dotnet/supporting-the-community-with-wf-and-wcf-oss-projects/
-  https://github.com/FritzAndFriends/BlazorWebFormsComponents
-  https://themesof.net/
-  https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#table-of-format-specifiers
-  https://stackoverflow.com/questions/9/how-do-i-calculate-someones-age-in-c
+  GitHub
+    https://github.com/FritzAndFriends/BlazorWebFormsComponents
+
+  Microsoft
+    https://aka.ms/dotnet/sdk-not-found
+    https://aka.ms/dotnet-core-download
+    https://aka.ms/netsdk1083
+    https://aka.ms/new-console-template
+    https://aka.ms/dotnet-core-support
+    https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-5/
+    https://devblogs.microsoft.com/dotnet/preview-features-in-net-6-generic-math
+    https://devblogs.microsoft.com/dotnet/supporting-the-community-with-wf-and-wcf-oss-projects/
+    https://docs.microsoft.com/en-us/dotnet/api/system.collections.concurrent
+    https://docs.microsoft.com/en-us/dotnet/api/system.reflection.emit.assemblybuilder
+    https://docs.microsoft.com/en-us/dotnet/api/system.reflection.methodbase.invoke
+    https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview
+    https://docs.microsoft.com/en-us/dotnet/standard/assembly/unloadability
+    https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#table-of-format-specifiers
+    https://docs.microsoft.com/en-us/dotnet/standard/library-guidance/cross-platform-targeting#multi-targeting
+    https://docs.microsoft.com/en-us/nuget/hosting-packages/overview
+    https://docs.microsoft.com/en-us/nuget/reference/msbuild-targets
+    https://dotnet.microsoft.com/download/dotnet/3.1
+    https://dotnet.microsoft.com/download/visual-studio-sdks
+    https://www.nuget.org/
+    https://www.nuget.org/packages/DialectSoftware.Collections.Matrix/
+    https://www.nuget.org/packages/manage/upload
+    https://www.nuget.org/packages/System.IO.FileSystem/
+
+
+
+
+  PacktPub
+      https://static.packt-cdn.com/downloads/9781801077361_Bonus_Content.pdf
+
+  StackOverflow
+    https://stackoverflow.com/questions/18144431/regex-to-split-a-csv
+    https://stackoverflow.com/questions/9/how-do-i-calculate-someones-age-in-c
+
+  Others
+    https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer
+    https://www.mono-project.com/download/stable/
+    https://nuget.info
+    https://semver.org
+    https://spdx.org/licenses/
+    https://themesof.net/
+    https://en.wikipedia.org/wiki/Names_of_large_numbers
+
   
 
 Standards

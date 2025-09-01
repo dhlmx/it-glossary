@@ -1,5 +1,10 @@
 AAA: Arrange, Act, Assert
+API: 
 
+BCL: Base Class Libraries, or CoreFX
+
+CoreCLR: Common Language Runtime
+CoreFX: See BCL
 CRM: Customer Relationship Management
 
 DAX: Data Analysis Expressions
@@ -7,6 +12,7 @@ DBA: Database Administrator
 DDD: Domain-Driven Design
 DDL: Data Definition Language
 DIE: Drop if exists
+DLL: Dynamic Link Library
 DRY: Don't Repeat Yourself
 DML: Data Modification Language
 DMV: Dynamic Management Views
@@ -14,6 +20,9 @@ DMV: Dynamic Management Views
 ETL: Extract, transform, and Load
 ERP: Enterprise Resource Planning
 
+FIFO: First-in First-out
+
+GAC: Global Assembly Cache
 GPS: Global Positioning System
 
 HCI: Human-computer Interface
@@ -21,12 +30,17 @@ HRM: Human Resource Management
 HTAP: Hybrid Transactional and Analytical Processing
 
 IaaS: Infrastructure-as-a-Service
+IL: Intermediate Language
 IMHO: In My Humble Opinion
+ISO: International Organization for Standardization
 
 JSON: JavaScript Object Notation
 
+LIFO: Last-in First-out
 LQS: Live Query Statistics
 LTS: Long-Term Support
+
+NTS: NetTopologySuite
 
 OData: Open Data Protocol
 ODBC: Open Database Connectivity
@@ -34,12 +48,15 @@ OLE DB: Object Linking and Embedding Database
 OLTP: Online Transaction Processing
 
 PaaS: Platform as a Service
+PCLs: Portable Class Libraries
 POC: Proof of Concept
 
+RID: Runtime Identifier
 RLS: Row-Level Security
 RVSP: 
 
 SaaS: Software as a Service
+SDK: 
 SKU: Stock Keeping Unit
 SME: Subject Matter Expert
 SRID: Spatial Reference Identifier
